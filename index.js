@@ -2,12 +2,12 @@
 
 const program=require('commander')
 const helpOptions=require('./lib/core/help')
-const goActions=require('./lib/core/goActions')
+const commands=require('./lib/core/commands')
 
-const { version } = require("./lib/constants")
+const { version } = require("./lib/config/constants")
 program.version(version,'-v,--version')
 helpOptions()
-goActions()
+commands()
 
 program.parse(process.argv);
 
